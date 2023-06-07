@@ -35,14 +35,6 @@ public class App
         ArrayList arr=new ArrayList(s);
         driver.switchTo().window((String)arr.get(1));
         new WebDriverWait(driver,Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart-button"))).click();
-//        int actual=949;
-//        int expect=Integer.parseInt(driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div[1]/div/span[2]/span/span[2]/span[2]")).getText());
-//        int actualQ=1;
-//        int expectQ=Integer.parseInt(driver.findElement(By.xpath("/html/body/div[1]/header/div/div[7]/div[1]/div/div/div[4]/div/div/div[2]/div[3]/div[7]/div[1]/span/span/span[1]/span/span/span/span/span/span[2]")).getText());
-//        if(expect==actual && expectQ==actualQ)
-//        {
-//        	System.out.print("Price and Quantity valid");
-//        }
         driver.findElement(By.name("proceedToRetailCheckout")).click();
         TakesScreenshot stc=(TakesScreenshot)driver;
         File src=stc.getScreenshotAs(OutputType.FILE);
